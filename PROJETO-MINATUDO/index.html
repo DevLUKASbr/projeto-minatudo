@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Minatudo</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Mineradores</h1>
+        <form id="formMinerador">
+            <input type="text" id="nome" placeholder="Nome" required>
+            <input type="text" id="cpf" placeholder="CPF" required>
+            <input type="text" id="endereco" placeholder="Endereço">
+            <input type="text" id="telefone" placeholder="Telefone">
+            <input type="email" id="email" placeholder="Email">
+            <input type="date" id="dataContratacao" required>
+            <button type="submit">Cadastrar Minerador</button>
+        </form>
+
+        <h1>Cadastro de Minérios</h1>
+        <form id="formMinerio">
+            <input type="text" id="nomeMinerio" placeholder="Nome do Minério" required>
+            <textarea id="descricao" placeholder="Descrição"></textarea>
+            <input type="number" id="valorPorTonelada" placeholder="Valor por Tonelada" step="0.01" required>
+            <button type="submit">Cadastrar Minério</button>
+        </form>
+
+        <h1>Registrar Extração de Minério</h1>
+        <form id="formExtracao">
+            <select id="mineradorId" required>
+                <!-- Options serão preenchidos dinamicamente com JavaScript -->
+            </select>
+            <select id="minerioId" required>
+                <!-- Options serão preenchidos dinamicamente com JavaScript -->
+            </select>
+            <input type="date" id="dataExtracao" required>
+            <input type="number" id="quantidadeExtracao" placeholder="Quantidade em Toneladas" step="0.01" required>
+            <button type="submit">Registrar Extração</button>
+        </form>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
